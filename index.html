@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Como Lucrar Consistentemente com Índices Sintéticos — Ebook</title>
+  <meta name="description" content="Ebook passo a passo: estratégia prática para operar índices sintéticos na Deriv. Gestão de banca, exemplos e estudo de caso para obter consistência." />
+  <meta name="author" content="Autor" />
+  <style>
+    :root{
+      --bg:#071627; --card:#0b2a39; --accent:#23b573; --accent-2:#ffd166; --muted:#9fb3bf; --glass:rgba(255,255,255,0.04);
+      --radius:14px; --max-width:1100px;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; background:linear-gradient(180deg,var(--bg),#04202a); color:#e6f3f2; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--max-width); margin:36px auto; padding:24px}
+
+    /* HERO */
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:center;}
+    .badge{display:inline-block; padding:6px 12px; background:var(--glass); color:var(--accent-2); border-radius:999px; font-weight:600; font-size:13px}
+    h1{font-size:36px; line-height:1.02; margin:12px 0 8px}
+    .sub{color:var(--muted); font-size:17px; margin-bottom:18px}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{background:var(--accent); color:#042022; padding:14px 18px; border-radius:10px; font-weight:700; border:none; cursor:pointer; box-shadow:0 10px 30px rgba(2, 111, 78, 0.12)}
+    .btn.secondary{background:transparent; color:var(--accent-2); border:1px solid rgba(255,209,102,0.08)}
+    .price{font-size:28px; font-weight:800; color:var(--accent-2)}
+
+    /* Card */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:20px}
+    .cover{height:100%; display:flex; align-items:center; justify-content:center}
+    .cover img{max-width:100%; border-radius:8px; box-shadow:0 18px 50px rgba(2,22,30,0.6)}
+
+    /* BENEFITS */
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:26px}
+    .feature{background:var(--card); padding:18px; border-radius:12px}
+    .feature h3{margin:0 0 6px}
+    .feature p{margin:0; color:var(--muted)}
+
+    /* Social proof */
+    .proof{display:flex; align-items:center; gap:14px; margin-top:18px}
+    .avatars{display:flex; gap:-10px}
+    .avatars div{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#197a5a); border:3px solid #071627}
+
+    /* CONTENT SECTIONS */
+    section{margin-top:34px}
+    section h2{color:#fff; margin-bottom:10px}
+    .two-col{display:grid; grid-template-columns:1fr 340px; gap:20px}
+    .box{background:var(--glass); padding:16px; border-radius:10px; color:var(--muted)}
+    ul.clean{padding-left:16px}
+
+    /* FAQ / Footer */
+    .faq{display:grid; gap:12px}
+    .faq-item{background:rgba(0,0,0,0.18); padding:12px; border-radius:8px}
+    footer{margin-top:42px; color:var(--muted); font-size:14px; text-align:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      h1{font-size:26px}
+      .grid{grid-template-columns:1fr}
+      .hero{gap:18px}
+    }
+
+    /* tiny JS helpers */
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.04);color:var(--accent-2);font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div>
+        <span class="badge">Ebook + Bônus</span>
+        <h1>Como Lucrar Consistentemente com Índices Sintéticos. Descubra a Estratégia Que Já Transformou Mais de 500 Traders</h1>
+        <p class="sub">Pare de perder tentando adivinhar o mercado. Aprenda a técnica comprovada para lucrar de forma consistente todos os dias na Deriv.</p>
+        <div class="cta-row">
+          <button class="btn" onclick="document.getElementById('buy').scrollIntoView({behavior:'smooth'})">Comprar agora — <span class="price">R$85,28</span></button>
+          <button class="btn secondary" onclick="openPreview()">Ver Amostra (capítulo grátis)</button>  
+        </div>
+
+        <div class="proof">
+          <div class="avatars" aria-hidden>
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div style="color:var(--muted)">Mais de <strong style="color:var(--accent-2)">500</strong> pessoas já aplicam esta estratégia</div>
+        </div>
+
+        <div class="grid" style="margin-top:20px">
+          <div class="feature card">
+            <h3>Passo a passo claro</h3>
+            <p>Regras de entrada, saída e progressão de stake — tudo explicado com exemplos práticos.</p>
+          </div>
+          <div class="feature card">
+            <h3>Gestão de banca</h3>
+            <p>Regras de risco, stop diário e meta realista para preservar seu capital.</p>
+          </div>
+          <div class="feature card">
+            <h3>Resultados reais</h3>
+            <p>Estudo de caso com 7 dias de aplicação e tabelas de evolução de banca.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="card cover">
+        <!-- Placeholder capa do ebook -->
+        <img src="mockup-ebook.png.png" alt="Capa do Ebook O Método Inteligente para Operar Índices Sintéticos" />
+
+      </aside>
+    </header>
+
+    <main>
+      <section>
+        <div class="two-col">
+          <article>
+            <h2>O que você vai aprender</h2>
+            <div class="box">
+              <ul class="clean">
+                <li><strong>Configuração completa</strong> para operar Over/Under no último dígito com 1 tick.</li>
+                <li><strong>Progressão controlada</strong> para recuperar perdas sem arriscar a banca desnecessariamente.</li>
+                <li><strong>Checklist diário</strong> e rotinas para manter disciplina e reduzir ansiedade.</li>
+                <li><strong>Estudo de caso</strong> com resultados semanais e tabelas práticas.</li>
+              </ul>
+            </div>
+
+            <h2 style="margin-top:18px">Quem deve ler este ebook</h2>
+            <p class="box" style="margin-top:8px;color:var(--muted)">Traders iniciantes e intermediários que já conhecem a Deriv e querem transformar tentativas em resultados consistentes. Ideal para quem tem banca reduzida e busca crescimento sólido, passo a passo.</p>
+
+          </article>
+
+          <aside>
+            <div class="card">
+              <h3 style="margin-top:0">Oferta especial</h3>
+              <p style="margin:0 0 10px;color:var(--muted)">Ebook completo + planilha de gestão + checklist imprimível</p>
+
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+                <div>
+                  <div style="font-size:12px;color:var(--muted)">Preço normal</div>
+                  <div style="text-decoration:line-through;color:#4f6b70">R$261,16</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-size:12px;color:var(--muted)">Preço promocional</div>
+                  <div class="price">R$85,28</div>
+                </div>
+              </div>
+
+              <div style="margin-top:14px;display:flex;gap:10px">
+                <button class="btn" style="flex:1" onclick="document.getElementById('buy').scrollIntoView({behavior:'smooth'})">Comprar agora</button>
+                <button class="btn secondary" onclick="openGuarantee()">Garantia 7 dias</button>
+              </div>
+
+              <p style="font-size:13px;color:var(--muted);margin-top:12px">Pagamento seguro. Receba o ebook instantaneamente em PDF após a confirmação.</p>
+            </div>
+
+            <div style="margin-top:16px" class="card">
+              <h3 style="margin-top:0">Bônus</h3>
+              <ul style="color:var(--muted);padding-left:18px">
+                <li>Planilha de controlo de banca (Excel)</li>
+                <li>Checklist diário em PDF</li>
+                <li>Acesso a um grupo (link após compra)</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section>
+        <h2>Estudo de Caso (Resumo)</h2>
+        <div class="card">
+          <p style="color:var(--muted)">Exemplo prático: banca inicial de <strong>$200</strong>, meta diária de <strong>$4.50</strong>. Em 7 dias de aplicação disciplinada, o estudo mostra <strong>crescimento de 12,1%</strong>. Resultados dependem do cumprimento das regras e gestão de banca.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq">
+          <div class="faq-item"><strong>Este ebook garante lucro?</strong><p style="margin:6px 0;color:var(--muted)">Não. Este material é educativo. A estratégia diminui riscos, mas o mercado envolve perdas possíveis.</p></div>
+          <div class="faq-item"><strong>Preciso de muita banca?</strong><p style="margin:6px 0;color:var(--muted)">Não. O método foi desenhado para começar com banca reduzida. Ajuste stakes conforme seu capital.</p></div>
+          <div class="faq-item"><strong>Inclui suporte?</strong><p style="margin:6px 0;color:var(--muted)">Sim: acesso a um grupo exclusivo e templates estão entre os bônus.</p></div>
+        </div>
+      </section>
+
+      <section id="buy">
+  <h2>Comprar Agora</h2>
+  <div class="card">
+    <p style="color:var(--muted)">
+      Clique em comprar para seguir para a página de pagamento. Após confirmação você receberá um link de download do PDF e os arquivos bônus.
+    </p>
+    <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+      <button class="btn" onclick="window.open('https://pay.hotmart.com/V102747559N', '_blank')">
+        Comprar — R$85,28
+      </button>
+      <button class="btn secondary" onclick="openGuarantee()">Garantia 7 dias</button>
+    </div>
+  </div>
+</section>
+
+
+          <p style="margin-top:12px;color:var(--muted)">Formas de pagamento: integração com a plataformas Hotmart (integração paga separadamente).</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2025 — O Método Inteligente Para Operar Índices Sintéticos. Todos os direitos reservados.</p>
+      <p style="margin-top:8px;color:var(--muted)">Aviso: Operar envolve riscos. Leia o aviso de risco no ebook antes de aplicar qualquer estratégia.</p>
+    </footer>
+  </div>
+
+  <script>
+    function openPreview(){
+      alert('Pré-visualização: capítulo grátis será enviado após integração com o sistema de vendas.');
+    }
+    function openGuarantee(){
+      alert('Garantia: 7 dias de reembolso total. Mais detalhes na página de checkout.');
+    }
+    function checkout(){
+      alert('Ação de checkout simulada. Integre com gateway de pagamento para finalizar a venda.');
+    }
+  </script>
+</body>
+</html>
